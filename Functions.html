@@ -1,0 +1,32 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+<script>
+$(document).ready(function(){
+	$button.click(function(){
+		$("form").hide();
+		});
+	});
+
+function loadForm(){
+setValues("input");
+setValues("select");
+}
+function setValues(tag){
+var inputs = document.getElementsByTagName(tag);
+	for(var i=o;i<inputs.length-1;i++){
+		window.sessionStorage.getItem(inputs[i].name, inputs[i].value);
+	}
+}
+
+function createButtons(){
+	var btn = document.createElement("button");
+}
+</script>
+
+
+</body>
+</html>
