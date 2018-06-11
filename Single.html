@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="Functions.html"></script>
+</head>
+<body>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<style>
+#h01{
+	color:red;
+	font-family:arial;
+	text-align:center;
+}
+</style>
+<h1 id="h01">Single player booking</h1>
+
+<script>
+$(document).ready(function(){
+	$("#submit").click(function(){
+		$("form").hide();
+		});
+	});
+</script>
+
+
+
+<!-- Form to gather information -->
+<form action="Results1.html" method="post">
+Participant first name:<br>
+<input type="text" name="first" required><br>
+Participant last name:<br>
+<input type="text" name="last" required><br>
+Parent/Guardian e-mail:<br>
+<input type="email" name="contactEmail" required><br>
+Parent/Guardian phone number:<br>
+<input type="tel" name="contactPhone" required>
+<br>
+
+Gender:<br>
+<input type="radio" name="gender" value="male"> Male<br>
+<input type="radio" name="gender" value="male"> Female<br>
+<input type="radio" name="gender" value="male"> Other<br><br>
+
+Age:<br>
+<select name="age" required>
+<option value="5-6">5-6</option>
+<option value="7-8">7-8</option>
+<option value="9-10">9-10</option>
+<option value="11-12">11-12</option>
+<option value="13-14">13-14</option>
+</select><br>
+
+Experience:<br>
+<select name="Experience">
+<option value="little">&lt 1 year or no experience</option>
+<option value="1-2">1-2 years</option>
+<option value="3-4">3-4 years</option>
+<option value="5+">5+ years</option>
+</select><br>
+
+<br>Previous leagues/associations(if any):<br>
+<input type="text" name="league"><br><br>
+
+Select prefered coach(if any)<br>
+<input type="radio" name="Coach" value="Michael Kenny"> Michael Kenny<br>
+<input type="radio" name="Coach" value="Stuart Miles"> Stuart Miles<br>
+<input type="radio" name="Coach" value="Kevin Savard"> Kevin Savard<br>
+<input type="radio" name="Coach" value="Clare Murphy"> Clare Murphy<br>
+<input type="radio" name="Coach" value="Sean Stoqua"> Sean Stoqua<br>
+<input type="radio" name="Coach" value="Troy Kenny"> Troy Kenny<br><br>
+<input id="submit" type="submit" onclick="return saveForm();" value="submit">
+
+</form>
+
+
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<h1> </h1>
+<script>
+var i = 1
+$(document).ready(function() {
+    $.ajax({
+        type: "GET",
+        url: "file:///C:/Users/Zack/Documents/School/ICS4U/bookings.csv",
+        dataType: "text",
+        success: function(data) {processData(data);}
+     });
+});
+
+function processData(allText) {
+    var allTextLines = allText.split(/\r\n|\n/);
+    var headers = allTextLines[0].split(',');
+    var lines = [];
+
+    for (i = 1; i<allTextLines.length; i++) {
+        var data = allTextLines[i].split(',');
+        if (data.length == 3) {
+
+            var tarr = [];
+            for (var j=0; j<headers.length; j++) {
+                tarr.push(headers[j]+":"+data[j]);
+            }
+            lines.push(tarr);
+			var btn = document.createElement("button");        // Create a <button> element
+			var t = document.createTextNode(allTextLines[i]);       // Create a text node
+			btn.appendChild(t);                                // Append the text to <button>
+			document.body.appendChild(btn);  
+        }
+    }
+    // alert(lines);
+}
+
+	for(var x=i;x>0;x--){
+	$("#option" + x).click(function(){
+		
+	});
+	}
+
+
+</script>
+
+
+
+
+</body>
+</html>
