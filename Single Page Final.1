@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title> Group Sign-Up Form</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<style>
+#h01{
+	color:white;
+	font-family:"sans-serif";
+	text-align:center;
+	font-size:18px;
+}
+#h02{
+	color:white;
+	font-family:"sans-serif";
+	font-size:14px;
+	text-align:justify;
+
+}
+</style>
+
+
+<body>
+ <div class="container"> 
+<br> <br> <br>
+<h1>SINGLE SIGN UP</h1>
+
+<script>
+$(document).ready(function(){
+	$("#submit").click(function(){
+		$("form").hide();
+		});
+	});
+</script>
+
+ <form>
+ <div class="form-input">
+ <input type="text" name="firstname" placeholder="Enter the Participant's First Name*" required/> 
+ </div>
+ <div class="form-input">
+ <input type="text" name="lastname" placeholder="Enter the Participant's Last Name*" required/>
+ </div>
+ <div class="form-input">
+ <input type="text" name="email" placeholder="Enter the Parent's E-mail address*"required/>
+ </div>
