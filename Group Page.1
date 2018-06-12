@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title> Group Sign-Up Form</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<style>
+#h01{
+	color:white;
+	font-family:"sans-serif";
+	text-align:center;
+	font-size:18px;
+}
+#h02{
+	color:white;
+	font-family:"sans-serif";
+	font-size:14px;
+	text-align:justify;
+
+}
+</style>
+
+
+<body>
+ <div class="container"> 
+<br> <br> <br>
+<h1>GROUP SIGN UP</h1>
+
+<script>
+$(document).ready(function(){
+	$("#submit").click(function(){
+		$("form").hide();
+		});
+	});
+</script>
+
+ <form>
+ <div class="form-input">
+ <input type="text" name="firstname" placeholder="Enter the Participant's First Name*" required/> 
+ </div>
+ <div class="form-input">
+ <input type="text" name="lastname" placeholder="Enter the Participant's Last Name*" required/>
+ </div>
+ <div class="form-input">
+ <input type="text" name="email" placeholder="Enter the Parent's E-mail address*"required/>
+ </div>
+ <div class="form-input">
+ <input type="text" name="phone" placeholder="Enter the Participant's Phone Number*" required/>
+ </div>
+
+<h1 id="h01">Gender</h1>
+<h4><input type="radio" name="gender" value="male">Male</h4>
+<h4><input type="radio" name="gender" value="male"> Female</h4>
+<h4><input type="radio" name="gender" value="male"> Other</h4>
+
+<h1 id="h01">Age:</h1>
+<select name="age" required>
+<option value="5-6">5-6</option>
+<option value="7-8">7-8</option>
+<option value="9-10">9-10</option>
+<option value="11-12">11-12</option>
+<option value="13-14">13-14</option>
+</select><br> <br>
+
+<h1 id="h01">Experience:</h1>
+<select name="Experience">
+<option value="little">&lt 1 year or no experience</option>
+<option value="1-2">1-2 years</option>
+<option value="3-4">3-4 years</option>
+<option value="5+">5+ years</option>
+</select><br>
+
+<div class="form-input">
+ <input type="text" name="league" placeholder="Enter any previous leagues/associations(if any)"/option> 
+ </div>
+
+<h1 id="h01">Select Preferred Coach(if any)</h1>
+<h4><input type="radio" name="Coach" value="Michael Kenny"> Michael Kenny</h4> 
+<h4><input type="radio" name="Coach" value="Stuart Miles"> Stuart Miles</h4> <h4>
+<input type="radio" name="Coach" value="Kevin Savard"> Kevin Savard</h4>
+<h4><input type="radio" name="Coach" value="Clare Murphy"> Clare Murphy</h4>
+<h4><input type="radio" name="Coach" value="Sean Stoqua"> Sean Stoqua</h4>
+<h4><input type="radio" name="Coach" value="Troy Kenny"> Troy Kenny</h4><br>
+
+<input id="submit" type="submit" onclick="return saveForm();" value="Submit" class="btn-login"/>
+<br> <br> <br>
+
+
+
+
+ </form>
+ </div>
+</body>
+</html>
+
